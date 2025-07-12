@@ -3,7 +3,7 @@ export default function NavBar(){
         <div className="Nav-wrap">
             <nav className="nav-class">
                 <div>
-                    <p className="logo">bruhmaand</p>
+                    <p className="logo">svermash</p>
                 </div>
                 <div>
                     <ul className="nav-ul">
@@ -33,16 +33,16 @@ export function Footer(){
                 </div>
                 <div className="li-wrap our-social">
                     <p id="footer-p">OUR SOCIAL </p>
-                    <li><a href="https://github.com/bruhmaand" target="_blank" rel="noopener noreferrer">Github</a></li>
+                    <li><a href="https://github.com/svermash" target="_blank" rel="noopener noreferrer">Github</a></li>
                     <li><a href="https://www.linkedin.com/in/sver/" target="_blank" rel="noopener noreferrer">LinkedIN</a></li>
                 </div>
             </nav>
             <nav className="footer-bottom">
                 <div>
-                    <p id="footer-p">made with &#10084; by sverma</p>
+                    <p id="footer-p">made with &#10084; by svermash</p>
                 </div>
                 <div className="footer-bm-a">
-                    <a href="#">terms & condition</a>
+                    <a href="#">Terms & Conditions</a>
                     <a href="#">Privacy Policy</a>
                     <a href="#">Helpdesk</a>
                 </div>
