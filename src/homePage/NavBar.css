@@ -117,6 +117,9 @@ hr{
 }
 /* mobile friendly?*/
 @media (max-width: 600px) {
+    .footer{
+      gap: 0;
+    }
     .nav-action{
         margin-left: 20px; /* burger to lil right */
         display: flex;
