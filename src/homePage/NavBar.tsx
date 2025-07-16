@@ -8,7 +8,8 @@ export default function NavBar(){
   };
 
     return (
-        <div className="Nav-wrap">
+        
+        <div className="Nav-wrap"><hr></hr>
             <nav className="nav-class">
                 {/* first div */}
                 <div className="nav-action">
