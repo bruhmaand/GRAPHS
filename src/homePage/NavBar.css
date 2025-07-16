@@ -31,7 +31,9 @@
 .nav-ul li a:hover{
     background-color: rgb(246, 167, 70);
 }
-
+a{
+  color: rgb(19, 0, 53);
+}
 /*now footer */
 .footer{
     display: flex;
@@ -82,7 +84,8 @@
 }
 hr{
     height: 1px;
-    background-color: brown;
+    border: none;
+    background-color: rgb(94, 49, 148);
 }
 
 /* the gap between nav and footer */
@@ -116,7 +119,9 @@ hr{
 @media (max-width: 600px) {
     .nav-action{
         margin-left: 20px; /* burger to lil right */
-    }
+        display: flex;
+        align-items: center;
+      }
     .login-btn{
         display: none; /* till i figure how to include login in ham menu */
     }

@@ -43,7 +43,7 @@ export default function NavBar(){
 
 export function Footer(){
     return (
-        <div className="footer-wrap">
+        <div className="footer-wrap"><hr></hr>
             <nav className="footer">
                 <div className="li-wrap about-us">
                     <p id="footer-p">ABOUT US</p>
