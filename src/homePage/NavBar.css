@@ -14,6 +14,7 @@
     color: rgb(178, 97, 253);
     font-size: 2rem;
     margin-left: 20px;
+
 }
 .nav-ul{
     display: flex;
@@ -94,22 +95,114 @@ hr{
     flex: 1;
 }
 
+/* some shit i need to figure */
+.nav-class {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Desktop: hamburger hidden */
+.ham-menu {
+  display: none;
+}
 /* mobile friendly?*/
 @media (max-width: 600px) {
-    .nav-class {
-        flex-direction: column;
-        align-items: flex-start;
+    .nav-action{
+        margin-left: 20px; /* burger to lil right */
     }
-
-    .nav-ul {
-        flex-direction: column;
-        width: 100%;
+    .login-btn{
+        display: none; /* till i figure how to include login in ham menu */
     }
-
-    .nav-ul li {
-        padding: 10px 0;
+    .logo {
+    position: absolute;  /* center in mobile view */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
     }
+    /* make everything bottom column wise in mobile */
+  .nav-class {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
+  .nav-ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-ul li {
+    padding: 10px 0;
+  }
+ /* that thing which comes out */
+.off-screen-menu {
+  background: rgb(242, 196, 139);
+  height: 100vh;
+  width: 100%;
+  max-width: 300px;
+  position: fixed;
+  top: 0;
+  right: -300px; /* hidden off-screen */
+  transition: right 0.3s ease;
+  z-index: 999; /* make sure it’s on top */
+}
+
+.off-screen-menu.active {
+  right: 0;
+}
+
+  .ham-menu {
+    display: block;
+    height: 50px;
+    width: 50px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .ham-menu span {
+    display: block;
+    height: 5px;
+    width: 40px;
+    background-color: blueviolet;
+    border-radius: 25px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.3s ease;
+  }
+
+  .ham-menu span:nth-child(1) {
+    top: 10px;
+  }
+  .ham-menu span:nth-child(2) {
+    top: 22px;
+  }
+  .ham-menu span:nth-child(3) {
+    top: 34px;
+  }
+
+  .ham-menu.active span:nth-child(1) {
+    top: 22px;
+    transform: translateX(-50%) rotate(45deg);
+  }
+
+  .ham-menu.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .ham-menu.active span:nth-child(3) {
+    top: 22px;
+    transform: translateX(-50%) rotate(-45deg);
+  }
+}
+
+@media (max-width: 600px) {
     .footer {
         flex-direction: column;
         align-items: flex-start;

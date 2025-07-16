@@ -1,11 +1,28 @@
+import { useState } from "react";
+
 export default function NavBar(){
+    // script
+      const [menuOpen, setMenuOpen] = useState(false);
+      const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+  };
+
     return (
         <div className="Nav-wrap">
             <nav className="nav-class">
-                <div>
+                {/* first div */}
+                <div className="nav-action">
                     <p className="logo">svermash</p>
+                    <div className="Ham">
+                        <div className={`ham-menu ${menuOpen ? "active" : ""}`}onClick={toggleMenu}>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
                 </div>
-                <div>
+                {/* second div */}
+                <div className={`off-screen-menu ${menuOpen ? "active" : ""}`}>
                     <ul className="nav-ul">
                         <li><a href="#">HOME</a></li>
                         <li><a href="#">ABOUT</a></li>
@@ -13,12 +30,15 @@ export default function NavBar(){
                         <li><a href="#">DETAILS</a></li>
                     </ul>
                 </div>
+                {/* third div  */}
                 <div className="login-btn">
-                    <button>LOGIN</button>
+                    <button >LOGIN</button>
                 </div>
+                
             </nav><hr></hr>
         </div>
-    );
+         
+);
 }
 
 export function Footer(){
