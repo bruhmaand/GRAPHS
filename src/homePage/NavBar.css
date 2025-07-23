@@ -27,9 +27,11 @@
 .nav-ul li a{
     text-decoration: none;
     padding: 15px;
+    color: rgb(19, 0, 53);
 }
-.nav-ul li a:hover{
-    background-color: rgb(246, 167, 70);
+.nav-ul li a:hover,
+.nav-ul li a.active-link {
+  background-color: rgb(246, 167, 70);
 }
 a{
   color: rgb(19, 0, 53);
@@ -146,7 +148,7 @@ hr{
   }
 
   .nav-ul li {
-    padding: 10px 0;
+    padding: 20px 0;
   }
  /* that thing which comes out */
 .off-screen-menu {

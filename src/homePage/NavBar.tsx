@@ -1,5 +1,7 @@
 import { useState } from "react";
-
+//import { Link } from 'react-router-dom'
+// why navlink idk
+import { NavLink } from 'react-router-dom'
 export default function NavBar(){
     // script
       const [menuOpen, setMenuOpen] = useState(false);
@@ -25,11 +27,12 @@ export default function NavBar(){
                 {/* second div */}
                 <div className={`off-screen-menu ${menuOpen ? "active" : ""}`}>
                     <ul className="nav-ul">
-                        <li><a href="#">HOME</a></li>
-                        <li><a href="#">ABOUT</a></li>
-                        <li><a href="#">CONTACT</a></li>
-                        <li><a href="#">DETAILS</a></li>
+                    <li><NavLink to="/" className={({ isActive }) => isActive ? "active-link" : "" } onClick={() => setMenuOpen(false)}>HOME</NavLink></li>
+                    <li><NavLink to="/about" className={({ isActive }) => isActive ? "active-link" : ""} onClick={() => setMenuOpen(false)}>ABOUT</NavLink></li>
+                    <li><NavLink to="/contact" className={({ isActive }) => isActive ? "active-link" : ""} onClick={() => setMenuOpen(false)}>CONTACT</NavLink></li>
+                    <li><NavLink to="/details" className={({ isActive }) => isActive ? "active-link" : ""} onClick={() => setMenuOpen(false)}>DETAILS</NavLink></li>
                     </ul>
+
                 </div>
                 {/* third div  */}
                 <div className="login-btn">
